@@ -1,99 +1,222 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SuperBotz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <!-- header font -->
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- body font -->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <style type="text/css">
 
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
-        integrity="sha384-ekOryaXPbeCpWQNxMwSWVvQ0+1VrStoPJq54shlYhR8HzQgig1v5fas6YgOqLoKz" crossorigin="anonymous">
+        /* fonts */
+        body {
+            font-family: 'Droid Sans', arial, serif;
+            letter-spacing: 1px;
+        }
 
-    {% if title %}
-    <title>MediaDownload - {{title}}</title>
-    {% else %}
-    <title>Zee5 Api</title>
-    {% endif %}
-</head>
+        h1 {
+            font-family: 'Orbitron', arial, serif;
+            letter-spacing: 2px;
+        }
 
-<body class="bg-primary" style="background-color:white;">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="/">Unofficial Zee5</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        h2, h3, h4, h5, h6 {
+            letter-spacing: 2px;
+            font-weight: normal;
+        }
 
-	<meta http-equiv = "Content-Type" content = "text/html; charset = utf-8"/>
-		<link rel="shortcut icon" href="https://www.zee5.com/images/favicon.ico?ver=2.49.64"/>
-	</head>	
-	<body style="background-color:black;">
-		<div id = "gif" align = "center">
- <img src = 'https://www.zee5.com/images/ZEE5_logo.png?ver=2.49.64'/>
-		</div>
-		<p align = "center" style = "color:blue"><b>Stream premium content 100% free</b></p>
-		<div id = "menu" align = "center" style = "color:yellow">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0" action="/fetch" method="POST">
-                <input class="form-control mr-sm-2" name="link" type="search" placeholder="paste Zee5 link"
-                    aria-label="Search">
-                <button class="btn btn-outline-light btn-primary my-2 my-sm-0" type="submit">Download</button>
-            </form>
-        </div>
-    </nav>
+        /* colors */
+        body {
+            background-color: #fc00f8;
+            color: white;
+        }
 
-                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                    <form action="/fetch" method="POST">
-                        <div class="form-row">
-                            <div class="col-12 col-md-9 mb-2 mb-md-0">
-                                <input type="text" name="link" class="form-control form-control-lg"
-                                    placeholder="paste zee5 link">
-                            
-                            <div class="col-12 col-md-3">
-                                <button type="submit" class="btn btn-block btn-lg btn-success">Download</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-    </header>
+        .container {
+            background-color: #001eff;
+            border-color: #00faf6
+        }
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-                              </div>
-		<p align = "center" style = "color:red"><b>Stream premium content 100% free</b></p>
-		<div id = "menu" align = "center" style = "color:green">
-			<form action ="" method ="POST">
-				
-			<h2> HOW IT WORKS </h2>
-				<p style = "color:red"><b>1. Enter link of video you want to stream(zee5)</br></br>
-										   2. Click submit to begin stream
-										    </b></p>
-			<h3> Features </h3>
-				<p style = "color:white"><b> • No registration required</b></br></br>
-											• Added movies, shows, originals, music<b></p>
-			<a href = "templates/about.html">About</a> | <a href = "templates/contact.html">Contact</a>
-		</div>
-	</body>	
+        a {
+            color: #0400fa;
+        }
+
+        a:hover {
+            color: #0d1dff
+        }
+
+        #error {
+            border: 1px dotted white;
+            background: brown;
+        }
+
+        /* stripes and borders */
+
+        .main {
+            background-repeat: repeat-x;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAB9CAIAAADbWVFQAAADd0lEQVR4nO3d6VbbMBiE4Tcm3Tf2tRfSf+393wd03/dCk/6AgjF2otiSvpGsuYBY52HO4JPEMHn+4hl6eTqzPkFbptYHaMnRjLn1GW7muKKyPkMzR5KdOq4AMSxlKaSwxKXQ2axDyZ06ud4liWYdSnbq5IaNPVYqUphjJSSF7WYdSO7Uy+7+mDXrQLJTC6SwwkpRChOsRKWIj5WuFJEHfl9y0V85FyZes/YlO+UuRTSsDKSIg5WHFBE2a09yp173KknYZu1JdqqfFEGxMpMiHFZ+UgTCylKKEAO/K7nob3y0wnOzdiU75UUKv1h5S+ERK3spfG3WjuROvfX928vD6+1Idsq7FMOxxiPFQKxRSTEEa2xS9B74bclFfxf4Dac+L78t2anQUvTAGq0Uq2KNWYqVNmtLcqfeR/wwz/VSW5KdiimFI1aROs/yCxapyyy5ZpGqZ9HAb0ou+ge77991XnlTslOGUnRhFanWtFy/SHWluVkbkjv1UUCKRrM2JDslIkUdq0gtzcVZipRLKoqUc6brkov+SU8K88dRWqMptT7Tw5KVQq1ZylLAVGewPktKPaltusoBZaXqkThjElIoYKUihTlWQlLYDvwXSanH3XfpZueVlVoQmyOnKIUJVqJSwHQ+CX+QWr7GvZxjHs1xcYj6U5aVckw8rNSliIaVgRRx7rO+SUo9nK/8rmfwZslK9UhYrJykCIqVmRThsPKTItDAf5eUerD6ojfiv1myUsPjGStjKfxi5S2Fx836ISl1f/BO1eOnWbJSfuMBayRSDMcajxQDsUYlxZCB/ykpdc/rojfSs1myUkHTB2ucUvTAGq0Uq27WL0mpuyF3qp4VmiUrFS2uWEUKR6widZ7lWEXqMksG/rek1J1Yi97IombJSlmlE6tI3Uw7VpFqTctm/ZGUum20U/U0myUrpZBrWEVqca6witTSXGAVKZdM53AqKXVLYNEbqWSlBKP4NWtNqdOJHpasFDr/OfM8U72dAs7+L5VQs4Qeqq3lrLbpKlj6UohgJSGFAlYqUpgP/Jrkov/tuPe0bNaaoFO3FIZYyUlhhZWiFCabVUnu1Ezt4UygEnRykyIyVtJSxMRKXYpoWBlIEWfgJ5KL3uPPDgRv1kTQqZcUobFykiIoVmZSBNwsyZ1i2KczYZql6DRUiiBYmUrhHytfKeAfdPYd7TpexlgAAAAASUVORK5CYII=);
+        }
+
+        .footer {
+            min-height: 60px;
+            background-repeat: repeat-x;
+            background-position: bottom left;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAA8CAIAAAAfXYiZAAAB+ElEQVR4nO3b11aDQBSF4T2IXWM3lhfxTt//PWKvsTfwIllLEobQZuZsYM4DyFkffyKBRJ2encBPsQmlF9BNHEtvoBul+LBiAEp6idQogK0sRdlUrMYnjwhLUTYVJzZiwQoom4rUxMmjwAoom4pSG8ljzTEmhV/duQucrzExDZKCbFkhpdRP9vuBWFmNk4JUWfOUUt95/2MEymqoFNyXtUAp9VXsusVpWY2WgsuyFimlPstcCzsqqwVScIPVDik4eBkuUUp9VPokaresNknBalnLlFLvNe5u2CqrfVKwVNYKpdRb7Ttm5stqqxSMl7VKKfVq6C6sybLaLQWDZa1RSr0YvbNvpqwuSMFIWeuUUs8WnhbVLas7UqhZVo9SamjtCWR1rF5kcA1jM7T5Ybfi3+6gFKqVtUEp9WT/1lzpI3RWCmXL2qSUenT11KXEcTouheJlbVFKPbh9RlzoaF5qNPllbVNK3Ut8oyXnmF4qObPK2qGUupP7/l3mkb1UevRl7VJK3Qp/p1NXlpfKmumy9iilbgikMFWWl5o9/4t4qdwZvwz3KaWumaQwKstLFZywTyl1xScF8Z+jaIdTqh8hZPsx1iWl1EEEsJXFLAUwlXVBKXWYeE9nWZBfCiRlnVNKHaWuE+TXbIoUxMsaUEodZ1x7Si7bLCkAf1M7eHbSdYGuAAAAAElFTkSuQmCC);
+        }
+
+        .container {
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            overflow: hidden; /* otherwise the background image appears on top of the curved border */
+        }
+
+        /* layout */
+        body {
+            text-align: center;
+            line-height: 180%
+        }
+        a {
+            margin: 10px
+        }
+
+        .container {
+            width: 760px;
+            margin: 40px auto;
+            text-align: left;
+            max-width: calc(100% - 10px);
+        }
+
+        h2, h3, h4, h5, h6 {
+            margin-bottom: 0;
+        }
+
+        ul {
+            line-height: 150%;
+        }
+
+        ul, p {
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        .main, .footer {
+            padding: 1px 10px 0 10px;
+        }
+
+        #error {
+            display: none;
+            padding: 5px 10px;
+            margin: 30px 10px;
+        }
+
+        form ul {
+            list-style-type: none;
+            padding-left: 25px;
+        }
+
+        input[type=text] {
+            width: 640px;
+            max-width: calc(100% - 12em)
+        }
+
+        .footer {
+            position: relative;
+            clear: both;
+        }
+
+        .footer p {
+            margin: 0;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding-left: 10px;
+        }
+
+        #google-ad {
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        @media (min-width: 768px) {
+            #google-ad {
+                margin: 0;
+                float: right;
+                margin: 4px 2px 2px 20px;
+            }
+        }
+    </style>
+	
+<body>
+<div class="container">
+    <div class="main">
+        <h1>SuperBotz Proxy</h1>
+        <div id="error"></div>
+        <form action="no-js" method="get" id="unblocker-form">
+            <p>
+                Enter URL:
+                <input type="text" id="url" name="url" autofocus="autofocus" placeholder="www.google.com"/>
+                <input type="submit" value="Unblock"/>
+            </p>
+        </form>
+        <h3>
+            <center>Powered By <a href=http://cvatricks.blogspot.com>CvaTricks</a></center>
+        </h3>
+        <center><h4>Shortcuts</h4></center>
+        <a href="./proxy/https://www.google.com/">Google</a>
+        <a href="./proxy/https://www.wikipedia.org/">维基百科</a>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br>
+    <br>
+    <br>
+    <p>
+    <center>All rights reserved © Copyright: 2020 | Powered By <a href=http://cvatricks.blogspot.com>CvaTricks</a></center>
+    </p>
+</div>
+<script>
+    function $(id) {
+        return document.getElementById(id);
+    }
+
+    // $('unblocker-form').onsubmit = function(){
+    //	var url = $('url').value;
+    //	if(url.substr(0,4) != "http"){
+    //		url = "http://" + url;
+    //	}
+    //	window.location.pathname = 'proxy/' + url;
+    //	return false;
+    //};
+
+    function checkError() {
+        var search = window.location.search;
+        var start = search.indexOf('error=');
+        if (start > -1) {
+            var stop = search.indexOf('&', start);
+            if (stop == -1) {
+                stop = undefined;
+            }
+            // +6 for "error="
+            var err = search.substr(start + 6, stop);
+            var $error = $('error');
+            $error.innerText = $error.textContent = decodeURIComponent(err);
+            $error.style.display = "block";
+        }
+    }
+
+    window.onload = function () {
+        $('url').focus();
+        checkError();
+    }
+</script>
+</body>
 </html>
